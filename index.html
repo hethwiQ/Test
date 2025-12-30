@@ -1,114 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <head>
     <meta charset="UTF-8" />
-    <title>Simple Website</title>
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Simple Test Website" />
-    <meta property="og:description" content="A minimal HTML & CSS website with OG image support." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/Talsy-Test/Og-Main-2.jpg" />
-    <meta property="og:image:width" content="900" />
-    <meta property="og:image:height" content="473" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hethwiq.github.io/Test/" />
-    <meta property="og:site_name" content="Talsy" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Simple Test Website" />
-    <meta name="twitter:description" content="A minimal HTML & CSS website with OG image support." />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/Talsy-Test/Og-Main-2.jpg" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
+    <meta name="theme-color" content="#0f0f14" />
+    
+    <title>OG Image Test Lab | Talsy</title>
 
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Talsy" />
+    <meta property="og:url" content="https://hethwiq.github.io/Test/" />
+    <meta property="og:title" content="Talsy - AI Powered Recruitment Platform" />
+    <meta property="og:description" content="Test page for dynamic link previews. Empowering careers with smart automation." />
+    
+    <meta property="og:image" content="https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/Talsy-Test/Og-Main-2.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Talsy Dashboard Preview" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Talsy - AI Powered Recruitment Platform" />
+    <meta name="twitter:description" content="Test page for dynamic link previews. Empowering careers with smart automation." />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/Talsy-Test/Og-Main-2.jpg" />
 
     <style>
         :root {
-            --bg: #0f0f14;
-            --card: #171720;
-            --text: #eaeaf0;
-            --muted: #a0a0b0;
-            --accent: #7c5cff;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            --bg-color: #0f0f14;
+            --card-color: #1a1a24;
+            --text-main: #ffffff;
+            --text-muted: #9494a8;
+            --accent: #FF5A5F; /* Talsy-like Accent */
+            --code-bg: #111116;
+            --success: #00e676;
         }
 
         body {
-            background: radial-gradient(1200px 600px at top, #1a1a2e, var(--bg));
-            color: var(--text);
-            min-height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
         }
 
         .container {
-            background: var(--card);
-            padding: 48px;
+            width: 100%;
+            max-width: 600px;
+            background: var(--card-color);
             border-radius: 16px;
-            max-width: 640px;
-            width: 90%;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            text-align: center;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
-        h1 {
-            font-size: 2.2rem;
+        h1 { font-size: 1.5rem; margin-bottom: 10px; letter-spacing: -0.5px; }
+        p { color: var(--text-muted); line-height: 1.6; font-size: 0.95rem; margin-bottom: 30px; }
+
+        /* Status Indicator */
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 230, 118, 0.1);
+            color: var(--success);
+            padding: 6px 12px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .status-dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; }
+
+        /* Live Debugger Section */
+        .debug-box {
+            background: var(--code-bg);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: left;
+            border-left: 3px solid var(--accent);
+        }
+
+        .debug-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
             margin-bottom: 12px;
-        }
-
-        p {
-            color: var(--muted);
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 32px;
-        }
-
-        a.button {
-            display: inline-block;
-            text-decoration: none;
-            padding: 12px 28px;
-            border-radius: 999px;
-            background: linear-gradient(135deg, var(--accent), #5a3dff);
-            color: #fff;
             font-weight: 600;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        a.button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(124, 92, 255, 0.4);
+        .code-line {
+            font-family: "SF Mono", "Monaco", "Consolas", monospace;
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+            word-break: break-all;
+            display: flex;
+            gap: 10px;
         }
+        
+        .label { color: var(--accent); min-width: 70px; }
+        .value { color: var(--text-muted); }
 
-        footer {
-            margin-top: 24px;
-            font-size: 0.85rem;
-            color: var(--muted);
-        }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Simple Website</h1>
-        <p>
-            This is a minimal single-file website built using only HTML and CSS.
-            It includes an Open Graph image for clean previews when shared.
-        </p>
-        <a class="button" href="#">Get Started</a>
-        <footer>
-            © 2025 · Minimal HTML Page
-        </footer>
-    </div>
-</body>
 
+    <div class="container">
+        <div class="status">
+            <span class="status-dot"></span>
+            METADATA ACTIVE
+        </div>
+
+        <h1>OG Image Test Lab</h1>
+        <p>This page mimics a production-ready link structure. Below is a live readout of the tags crawlers will see.</p>
+
+        <div class="debug-box">
+            <div class="debug-title">Live Meta Tag Readout</div>
+            <div id="debug-output"></div>
+        </div>
+    </div>
+
+    <script>
+        // This script grabs the tags actually rendered on the page so you can verify them instantly.
+        const tagsToCheck = [
+            { prop: 'og:title', label: 'Title' },
+            { prop: 'og:description', label: 'Desc' },
+            { prop: 'og:image', label: 'Image' },
+            { prop: 'og:type', label: 'Type' },
+            { name: 'twitter:card', label: 'Card' }
+        ];
+
+        const container = document.getElementById('debug-output');
+
+        tagsToCheck.forEach(tag => {
+            let element;
+            if (tag.prop) element = document.querySelector(`meta[property="${tag.prop}"]`);
+            if (tag.name) element = document.querySelector(`meta[name="${tag.name}"]`);
+
+            const div = document.createElement('div');
+            div.className = 'code-line';
+            
+            if (element) {
+                // Shorten URL for display if it's too long
+                let content = element.content;
+                if (content.length > 50) content = content.substring(0, 45) + '...';
+                
+                div.innerHTML = `<span class="label">${tag.label}</span> <span class="value">${content}</span>`;
+            } else {
+                div.innerHTML = `<span class="label" style="color:red">${tag.label}</span> <span class="value" style="color:red">MISSING</span>`;
+            }
+            container.appendChild(div);
+        });
+    </script>
+</body>
 </html>
