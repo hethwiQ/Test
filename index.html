@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Simple Website</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Simple Test Website" />
+    <meta property="og:description" content="A minimal HTML & CSS website with OG image support." />
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/Talsy-Test/OG-Main.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        :root {
+            --bg: #0f0f14;
+            --card: #171720;
+            --text: #eaeaf0;
+            --muted: #a0a0b0;
+            --accent: #7c5cff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: radial-gradient(1200px 600px at top, #1a1a2e, var(--bg));
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: var(--card);
+            padding: 48px;
+            border-radius: 16px;
+            max-width: 640px;
+            width: 90%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        a.button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--accent), #5a3dff);
+            color: #fff;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        a.button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(124, 92, 255, 0.4);
+        }
+
+        footer {
+            margin-top: 24px;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple Website</h1>
+        <p>
+            This is a minimal single-file website built using only HTML and CSS.
+            It includes an Open Graph image for clean previews when shared.
+        </p>
+        <a class="button" href="#">Get Started</a>
+        <footer>
+            © 2025 · Minimal HTML Page
+        </footer>
+    </div>
+</body>
+
+</html>
