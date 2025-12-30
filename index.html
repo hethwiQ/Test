@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0f0f14" />
-    
-    <title>OG Image Test Lab | Talsy</title>
+    <title>OG Status | Talsy</title>
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Talsy" />
@@ -13,7 +11,7 @@
     <meta property="og:title" content="Talsy - AI Powered Recruitment Platform" />
     <meta property="og:description" content="Test page for dynamic link previews. Empowering careers with smart automation." />
     
-    <meta property="og:image" content="https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/Talsy-Test/Og-Main-2.jpg" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/Talsy-Test/OG-Main-3.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Talsy Dashboard Preview" />
@@ -21,139 +19,127 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Talsy - AI Powered Recruitment Platform" />
     <meta name="twitter:description" content="Test page for dynamic link previews. Empowering careers with smart automation." />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/Talsy-Test/Og-Main-2.jpg" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/Talsy-Test/OG-Main-3.jpg" />
 
     <style>
+        /* Fast.com Minimalist Style */
         :root {
-            --bg-color: #0f0f14;
-            --card-color: #1a1a24;
-            --text-main: #ffffff;
-            --text-muted: #9494a8;
-            --accent: #FF5A5F; /* Talsy-like Accent */
-            --code-bg: #111116;
-            --success: #00e676;
+            --text-main: #1d1d1f;
+            --text-light: #86868b;
+            --green: #2ecc71; /* Fast.com Green */
         }
 
         body {
-            background-color: var(--bg-color);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
             color: var(--text-main);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
+            text-align: center;
         }
 
-        .container {
-            width: 100%;
-            max-width: 600px;
-            background: var(--card-color);
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-            border: 1px solid rgba(255,255,255,0.05);
+        /* The Big "Speed" Number Look */
+        h1 {
+            font-size: 15vw; /* Responsive huge text */
+            font-weight: 500;
+            margin: 0;
+            line-height: 1;
+            letter-spacing: -4px;
         }
 
-        h1 { font-size: 1.5rem; margin-bottom: 10px; letter-spacing: -0.5px; }
-        p { color: var(--text-muted); line-height: 1.6; font-size: 0.95rem; margin-bottom: 30px; }
-
-        /* Status Indicator */
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(0, 230, 118, 0.1);
-            color: var(--success);
-            padding: 6px 12px;
-            border-radius: 100px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-        .status-dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; }
-
-        /* Live Debugger Section */
-        .debug-box {
-            background: var(--code-bg);
-            border-radius: 8px;
-            padding: 20px;
-            text-align: left;
-            border-left: 3px solid var(--accent);
+        .unit {
+            font-size: 3vw;
+            color: var(--text-main);
+            vertical-align: super;
+            margin-left: 10px;
         }
 
-        .debug-title {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 12px;
+        .status-text {
+            color: var(--green);
+            font-size: 1.5rem;
+            margin-top: 10px;
             font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        .code-line {
-            font-family: "SF Mono", "Monaco", "Consolas", monospace;
-            font-size: 0.8rem;
-            margin-bottom: 8px;
-            word-break: break-all;
-            display: flex;
-            gap: 10px;
+        /* Minimal Debug Info */
+        .debug-container {
+            margin-top: 60px;
+            text-align: left;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            width: 90%;
+            max-width: 400px;
         }
-        
-        .label { color: var(--accent); min-width: 70px; }
-        .value { color: var(--text-muted); }
+
+        .debug-item {
+            display: flex;
+            justify-content: space-between;
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+            padding: 8px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .debug-label { color: #000; font-weight: 600; }
+        .debug-value { color: var(--green); }
+        .debug-value.error { color: #e74c3c; }
 
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="status">
-            <span class="status-dot"></span>
-            METADATA ACTIVE
-        </div>
-
-        <h1>OG Image Test Lab</h1>
-        <p>This page mimics a production-ready link structure. Below is a live readout of the tags crawlers will see.</p>
-
-        <div class="debug-box">
-            <div class="debug-title">Live Meta Tag Readout</div>
-            <div id="debug-output"></div>
-        </div>
+    <div>
+        <h1>Ready<span class="unit">✓</span></h1>
+        <div class="status-text">OG Metadata Active</div>
     </div>
 
+    <div class="debug-container" id="debug-output">
+        </div>
+
     <script>
-        // This script grabs the tags actually rendered on the page so you can verify them instantly.
-        const tagsToCheck = [
-            { prop: 'og:title', label: 'Title' },
-            { prop: 'og:description', label: 'Desc' },
-            { prop: 'og:image', label: 'Image' },
-            { prop: 'og:type', label: 'Type' },
-            { name: 'twitter:card', label: 'Card' }
+        const tags = [
+            { label: 'Image Size', value: '1200 x 630' }, // Hardcoded confirmation
+            { label: 'File Type', value: 'JPG (<300KB)' },
+            { prop: 'og:image', label: 'Image URL' },
+            { name: 'twitter:card', label: 'Card Type' }
         ];
 
         const container = document.getElementById('debug-output');
 
-        tagsToCheck.forEach(tag => {
-            let element;
-            if (tag.prop) element = document.querySelector(`meta[property="${tag.prop}"]`);
-            if (tag.name) element = document.querySelector(`meta[name="${tag.name}"]`);
+        tags.forEach(tag => {
+            const row = document.createElement('div');
+            row.className = 'debug-item';
 
-            const div = document.createElement('div');
-            div.className = 'code-line';
-            
-            if (element) {
-                // Shorten URL for display if it's too long
-                let content = element.content;
-                if (content.length > 50) content = content.substring(0, 45) + '...';
+            let displayValue = tag.value;
+            let isError = false;
+
+            // If it's a dynamic tag, fetch from DOM
+            if (tag.prop || tag.name) {
+                let el;
+                if (tag.prop) el = document.querySelector(`meta[property="${tag.prop}"]`);
+                if (tag.name) el = document.querySelector(`meta[name="${tag.name}"]`);
                 
-                div.innerHTML = `<span class="label">${tag.label}</span> <span class="value">${content}</span>`;
-            } else {
-                div.innerHTML = `<span class="label" style="color:red">${tag.label}</span> <span class="value" style="color:red">MISSING</span>`;
+                if (el) {
+                    displayValue = "Found";
+                } else {
+                    displayValue = "Missing";
+                    isError = true;
+                }
             }
-            container.appendChild(div);
+
+            row.innerHTML = `
+                <span class="debug-label">${tag.label}</span>
+                <span class="debug-value ${isError ? 'error' : ''}">${displayValue}</span>
+            `;
+            container.appendChild(row);
         });
     </script>
 </body>
