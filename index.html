@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OG Status | Talsy</title>
-
+    <title>Talsy - AI Talent Discovery (Test)</title>
+    <!-------
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Talsy" />
     <meta property="og:url" content="https://hethwiq.github.io/Test/" />
     <meta property="og:title" content="Talsy - AI Powered Recruitment Platform" />
-    <meta property="og:description" content="Test page for dynamic link previews. Empowering careers with smart automation." />
-    
-    <meta property="og:image" content="https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/Talsy-Test/OG-Main-3-lightmascot.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Talsy Dashboard Preview" />
+    <meta property="og:description"
+        content="Test page for dynamic link previews. Empowering careers with smart automation." />
+        -------->
+
+    <meta name="description"
+        content="Talsy AI connects companies, jobseekers, and freelancers with cutting-edge AI tools to automate hiring, streamline matching, and enable smart collaboration.">
+    <meta name="keywords"
+        content="Talsy AI,AI hiring,AI recruitment,AI job matching,freelance AI,jobseeker tools,automated recruitment software">
+
+    <meta property="og:title" content="Talsy AI – AI Solutions for Hiring, Freelancing &amp; Careers">
+    <meta property="og:description"
+        content="AI tools for hiring, job-seeking, and freelancing. Empower your career or business with smart automation.">
+    <meta property="og:url" content="https://talsy.ai/">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/Talsy-Test/OG-Main-3-lightmascot-v7.0.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Talsy Dashboard Preview">
+
+
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Talsy - AI Powered Recruitment Platform" />
-    <meta name="twitter:description" content="Test page for dynamic link previews. Empowering careers with smart automation." />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/Talsy-Test/OG-Main-3-lightmascot.jpg" />
+    <meta name="twitter:description"
+        content="Test page for dynamic link previews. Empowering careers with smart automation." />
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/Talsy-Test/OG-Main-3-lightmascot.jpg" />
 
     <style>
         /* Fast.com Minimalist Style */
         :root {
             --text-main: #1d1d1f;
             --text-light: #86868b;
-            --green: #2ecc71; /* Fast.com Green */
+            --green: #2ecc71;
+            /* Fast.com Green */
         }
 
         body {
@@ -44,7 +62,8 @@
 
         /* The Big "Speed" Number Look */
         h1 {
-            font-size: 15vw; /* Responsive huge text */
+            font-size: 15vw;
+            /* Responsive huge text */
             font-weight: 500;
             margin: 0;
             line-height: 1;
@@ -88,12 +107,21 @@
             border-bottom: 1px solid #f5f5f5;
         }
 
-        .debug-label { color: #000; font-weight: 600; }
-        .debug-value { color: var(--green); }
-        .debug-value.error { color: #e74c3c; }
+        .debug-label {
+            color: #000;
+            font-weight: 600;
+        }
 
+        .debug-value {
+            color: var(--green);
+        }
+
+        .debug-value.error {
+            color: #e74c3c;
+        }
     </style>
 </head>
+
 <body>
 
     <div>
@@ -102,7 +130,7 @@
     </div>
 
     <div class="debug-container" id="debug-output">
-        </div>
+    </div>
 
     <script>
         const tags = [
@@ -126,7 +154,7 @@
                 let el;
                 if (tag.prop) el = document.querySelector(`meta[property="${tag.prop}"]`);
                 if (tag.name) el = document.querySelector(`meta[name="${tag.name}"]`);
-                
+
                 if (el) {
                     displayValue = "Found";
                 } else {
@@ -143,4 +171,5 @@
         });
     </script>
 </body>
+
 </html>
